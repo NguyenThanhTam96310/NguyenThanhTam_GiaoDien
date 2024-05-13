@@ -1,0 +1,59 @@
+a {
+    text-decoration: none;
+}
+
+.bg-footer {
+    background-color: #24272e;
+    color: white;
+}
+
+.nav a {
+    padding-left: 20px;
+    color: #808080;
+}
+
+.list a {
+    color: #808080;
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.menu-size {
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+ul.wapper-cb {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.size-cb {
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin: 0 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rd_in {
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Tạo border đậm màu khi radio được chọn */
+.radio:checked+.rd_in {
+    border: 2px solid black;
+}
