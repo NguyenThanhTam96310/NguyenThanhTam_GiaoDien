@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NguyenThanhTam_GiaoDien</title>
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{asset("plugins/bootstrap/css/bootstrap.min.css")}}">
+  <link rel="stylesheet" href="{{asset("plugins/fontawesome/css/all.min.css")}}">
+  <script src="{{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
+  <link rel="stylesheet" href="{{asset("css/styles.css")}}">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-1">
                     <a href="#">
-                        <img class="img-fluid w-100" src="img/logo.png.jpg" alt="logo">
+                        <img class="img-fluid w-100" src="{{asset("img/logo.png.jpg")}}" alt="logo">
                     </a>
                 </div>
                 <div class=" container col-md-6 pt-4 pl-3">
@@ -118,33 +118,32 @@
             </nav>
         </div>
     </section>
-
     <section class="ndt-content">
-        <div class="row">
-            <h4 class="bg-light">Trang chủ/sản phẩm</h4>
-        </div>
         <div class="container">
+            <div class="row">
+                <h4 class="bg-light">Trang chủ/sản phẩm</h4>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <img class="img-fluid w-50" src="img/AIR-FORCE-1.jpg" alt="detail">
+                                    <img class="img-fluid w-50" src="{{asset("img/AIR-FORCE-1.jpg")}}" alt="detail">
                                 </div>
                                 <div class="col-md-12">
-                                    <img class="img-fluid w-50" src="img/AIR-FORCE-1.jpg" alt="detail">
+                                    <img class="img-fluid w-50" src="{{asset("img/AIR-FORCE-1.jpg")}}" alt="detail">
                                 </div>
                                 <div class="col-md-12">
-                                    <img class="img-fluid w-50" src="img/AIR-FORCE-1.jpg" alt="detail">
+                                    <img class="img-fluid w-50" src="{{asset("img/AIR-FORCE-1.jpg")}}" alt="detail">
                                 </div>
                                 <div class="col-md-12">
-                                    <img class="img-fluid w-50" src="img/AIR-FORCE-1.jpg" alt="detail">
+                                    <img class="img-fluid w-50" src="{{asset("img/AIR-FORCE-1.jpg")}}" alt="detail">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <img class="img-fluid w-100" src="img/AIR-FORCE-1.jpg" alt="detail">
+                            <img class="img-fluid w-100" src="{{asset("img/AIR-FORCE-1.jpg")}}" alt="detail">
                         </div>
                     </div>
                 </div>
@@ -260,7 +259,7 @@
 
                         <a>
                             <img class="img-fluid"
-                                src="img/AIR-FORCE-1-NIKE-315122-111-KING-SHOES-SNEAKER-TPHCM-TANBINH-2.jpg"
+                                src="{{asset("img/AIR-FORCE-1-NIKE-315122-111-KING-SHOES-SNEAKER-TPHCM-TANBINH-2.jpg")}}"
                                 alt="detail"><br>
                             Cái tên ‘Air Force One’ được lấy ý tưởng từ chiếc chuyên cơ cùng tên chuyên dùng chở tổng
                             thống
@@ -300,7 +299,7 @@
                     <div class="col-md">
                         <div class="product-item">
                             <div class="product-image">
-                                <img class="img-fluid h-100" src="img/giay-nike-quest-4-womens-road-running.jpeg"
+                                <img class="img-fluid h-100" src="{{asset("img/giay-nike-quest-4-womens-road-running.jpeg")}}"
                                     alt="">
                             </div>
                             <div class="product-name">
@@ -338,7 +337,7 @@
                     <div class="col-md">
                         <div class="product-item">
                             <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-90-se.jpeg" alt="">
+                                <img class="img-fluid" src="{{asset("img/giay-nike-air-max-90-se.jpeg")}}" alt="">
                             </div>
                             <div class="product-name">
                                 <h5 class="fs-6 py-1">NIKE AIR MAX 90 SE</h5>
@@ -375,7 +374,7 @@
                     <div class="col-md">
                         <div class="product-item">
                             <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-excee.jpeg" alt="">
+                                <img class="img-fluid" src="{{asset("img/giay-nike-air-max-excee.jpeg")}}" alt="">
                             </div>
                             <div class="product-name">
                                 <h5 class="fs-6 py-1">NIKE AIR MAX EXCEE</h5>
@@ -412,7 +411,7 @@
                     <div class="col-md">
                         <div class="product-item">
                             <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-revolution-6-running.jpeg" alt="">
+                                <img class="img-fluid" src="{{asset("img/giay-nike-revolution-6-running.jpeg")}}" alt="">
                             </div>
                             <div class="product-name">
                                 <h5 class="fs-6 py-1">NIKE REVOLUTION 6</h5>

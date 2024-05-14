@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NguyenThanhTam_GiaoDien</title>
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="{{asset("plugins/bootstrap/css/bootstrap.min.css")}}">
+  <link rel="stylesheet" href="{{asset("plugins/fontawesome/css/all.min.css")}}">
+  <script src="{{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
+  <link rel="stylesheet" href="{{asset("css/styles.css")}}">
 </head>
 
 <body>
@@ -108,7 +108,8 @@
                 <a class="nav-link disabled" aria-disabled="true"><strong>Câu hỏi</strong></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true"><strong>Liên hệ</strong></a>
+                <a class="nav-link disabled" aria-disabled="true" href="product_detail.html">Liên
+                    hệ</strong></a>
               </li>
             </ul>
 
