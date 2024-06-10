@@ -1,665 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.site')
+@section('content')
+<section class="ndt-content">
+    <div class="slide">
+        <div class="container my-5">
+            <h3>TẤT CẢ SẢN PHẨM</h3>
+             <!--pos home section-->
+             <div class=" pos_home_section">
+                <div class="row pos_home">
+                        <div class="col-lg-3 col-md-12">
+                           <!--layere categorie"-->
+                              <div class="sidebar_widget shop_c">
+                                    <div class="categorie__titile">
+                                        <h4>Categories</h4>
+                                    </div>
+                                    <div class="layere_categorie">
+                                        <ul>
+                                            <li>
+                                                <input id="acces" type="checkbox">
+                                                <label for="acces">Accessories<span>(1)</span></label>
+                                            </li>
+                                            <li>
+                                                <input id="dress" type="checkbox">
+                                                <label for="dress">Dresses <span>(2)</span></label>
+                                            </li>
+                                            <li>
+                                                <input id="tops" type="checkbox">
+                                                <label for="tops">Tops<span>(3)</span></label>
+                                            </li>
+                                            <li>
+                                                <input id="bag" type="checkbox">
+                                                <label for="bag">HandBags<span>(4)</span></label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <!--layere categorie end-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NguyenThanhTam_GiaoDien</title>
-    <link rel="stylesheet" href="{{asset("plugins/bootstrap/css/bootstrap.min.css")}}">
-  <link rel="stylesheet" href="{{asset("plugins/fontawesome/css/all.min.css")}}">
-  <script src="{{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}"></script>
-  <link rel="stylesheet" href="{{asset("css/styles.css")}}">
-</head>
+                            <!--color area start-->  
+                            <div class="sidebar_widget color">
+                                <h2>Color</h2>
+                                 <div class="widget_color">
+                                    <ul>
 
-<body>
-    <section class="ndt-header bg-black">
-        <div class="container py-2">
-            <div class="row">
-                <div class="col-md-1">
-                    <a href="#">
-                        <img class="img-fluid w-100" src="img/logo.png.jpg" alt="logo">
-                    </a>
-                </div>
-                <div class=" container col-md-6 pt-4 pl-3">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm..."
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-text" id="basic-addon2">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md-3 pt-2 text center">
-                    <div class="row text-center ">
-                        <div class="col-4 "><a href="#">
-                                <p class="p-0 m-0 fs-4 text-white"><i class="fa-regular fa-user"></i></p>
-                                <p class="p-0 m-0 text-white ">Đăng nhập</p>
-                            </a></div>
-                        <div class="col-4 "><a href="#">
-                                <p class="p-0 m-0 fs-4 text-white"><i class="fa-solid fa-cart-shopping"></i></p>
-                                <p class="p-0 m-0 text-white">Giỏ hàng</p>
-                            </a></div>
-                    </div>
-                </div>
+                                        <li><a href="#">Black <span>(10)</span></a></li>
+
+                                        <li><a href="#">Orange <span>(12)</span></a></li>
+
+                                        <li> <a href="#">Blue <span>(14)</span></a></li>
+
+                                        <li><a href="#">Yellow <span>(15)</span></a></li>
+
+                                        <li><a href="#">pink <span>(16)</span></a></li>
+
+                                        <li><a href="#">green <span>(11)</span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>                 
+                            <!--color area end--> 
+
+                            <!--price slider start-->                                     
+                            <div class="sidebar_widget price">
+                                <h2>Price</h2>
+                                <div class="ca_search_filters">
+
+                                    <input type="text" name="text" id="amount">  
+                                    <div id="slider-range"></div> 
+                                </div>
+                            </div>                                                       
+                            <!--price slider end-->
+
+                            <!--wishlist block start-->
+                            <div class="sidebar_widget wishlist mb-30">
+                                <div class="block_title">
+                                    <h3><a href="#">Wishlist</a></h3>
+                                </div>
+                                <div class="cart_item">
+                                   <div class="cart_img">
+                                       <a href="#"><img src="assets\img\cart\cart.jpg" alt=""></a>
+                                   </div>
+                                    <div class="cart_info">
+                                        <a href="#">lorem ipsum dolor</a>
+                                        <span class="cart_price">$115.00</span>
+                                        <span class="quantity">Qty: 1</span>
+                                    </div>
+                                    <div class="cart_remove">
+                                        <a title="Remove this item" href="#"><i class="fa fa-times-circle"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cart_item">
+                                   <div class="cart_img">
+                                       <a href="#"><img src="assets\img\cart\cart2.jpg" alt=""></a>
+                                   </div>
+                                    <div class="cart_info">
+                                        <a href="#">Quisque ornare dui</a>
+                                        <span class="cart_price">$105.00</span>
+                                        <span class="quantity">Qty: 1</span>
+                                    </div>
+                                    <div class="cart_remove">
+                                        <a title="Remove this item" href="#"><i class="fa fa-times-circle"></i></a>
+                                    </div>
+                                </div>
+                                <div class="block_content">
+                                    <p>2  products</p>
+                                    <a href="#">» My wishlists</a>
+                                </div>
+                            </div>
+                            <!--wishlist block end-->
+
+                            <!--popular tags area-->
+                            <div class="sidebar_widget tags  mb-30">
+                                <div class="block_title">
+                                    <h3>popular tags</h3>
+                                </div>
+                                <div class="block_tags">
+                                    <a href="#">ipod</a>
+                                    <a href="#">sam sung</a>
+                                    <a href="#">apple</a>
+                                    <a href="#">iphone 5s</a>
+                                    <a href="#">superdrive</a>
+                                    <a href="#">shuffle</a>
+                                    <a href="#">nano</a>
+                                    <a href="#">iphone 4s</a>
+                                    <a href="#">canon</a>
+                                </div>
+                            </div>
+                            <!--popular tags end-->
+
+                            <!--newsletter block start-->
+                            <div class="sidebar_widget newsletter mb-30">
+                                <div class="block_title">
+                                    <h3>newsletter</h3>
+                                </div> 
+                                <form action="#">
+                                    <p>Sign up for your newsletter</p>
+                                    <input placeholder="Your email address" type="text">
+                                    <button type="submit">Subscribe</button>
+                                </form>   
+                            </div>
+                            <!--newsletter block end--> 
+
+                            <!--special product start-->
+                            <div class="sidebar_widget special">
+                                <div class="block_title">
+                                    <h3>Special Products</h3>
+                                </div>
+                                <div class="special_product_inner mb-20">
+                                    <div class="special_p_thumb">
+                                        <a href="single-product.html"><img src="assets\img\cart\cart3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="small_p_desc">
+                                        <div class="product_ratting">
+                                           <ul>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                           </ul>
+                                       </div>
+                                        <h3><a href="single-product.html">Lorem ipsum dolor</a></h3>
+                                        <div class="special_product_proce">
+                                            <span class="old_price">$124.58</span>
+                                            <span class="new_price">$118.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="special_product_inner">
+                                    <div class="special_p_thumb">
+                                        <a href="single-product.html"><img src="assets\img\cart\cart18.jpg" alt=""></a>
+                                    </div>
+                                    <div class="small_p_desc">
+                                        <div class="product_ratting">
+                                           <ul>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                               <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                           </ul>
+                                       </div>
+                                        <h3><a href="single-product.html">Printed Summer</a></h3>
+                                        <div class="special_product_proce">
+                                            <span class="old_price">$124.58</span>
+                                            <span class="new_price">$118.35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--special product end-->
+
+
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <!--banner slider start-->
+                            <div class="banner_slider mb-35">
+                                <img src="assets\img\banner\bannner10.jpg" alt="">
+                            </div> 
+                            <!--banner slider start-->
+
+                            <!--shop toolbar start-->
+                            <div class="shop_toolbar mb-35">
+                               
+                                <div class="list_button">
+                                    <ul class="nav" role="tablist">
+                                        <li>
+                                            <a class="active" data-toggle="tab" href="#large" role="tab" aria-controls="large" aria-selected="true"><i class="fa fa-th-large"></i></a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false"><i class="fa fa-th-list"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="page_amount">
+                                    <p>Showing 1–9 of 21 results</p>
+                                </div>
+                                
+                                <div class="select_option">
+                                    <form action="#">
+                                        <label>Sort By</label>
+                                        <select name="orderby" id="short">
+                                            <option selected="" value="1">Position</option>
+                                            <option value="1">Price: Lowest</option>
+                                            <option value="1">Price: Highest</option>
+                                            <option value="1">Product Name:Z</option>
+                                            <option value="1">Sort by price:low</option>
+                                            <option value="1">Product Name: Z</option>
+                                            <option value="1">In stock</option>
+                                            <option value="1">Product Name: A</option>
+                                            <option value="1">In stock</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <!--shop toolbar end-->
+
+                            <!--shop tab product-->
+                            <x-product-category-home/>
+                            <x-product-category-home/>
+                            <x-product-category-home/>
+                            <!--shop tab product end-->
+
+                            <!--pagination style start--> 
+                            <div class="pagination_style">
+                                <div class="item_page">
+                                    <form action="#">
+                                        <label for="page_select">show </label>
+                                        <select id="page_select">
+                                            <option value="1">9</option>
+                                            <option value="2">10</option>
+                                            <option value="3">11</option>
+                                        </select>
+                                        <span> Products by page</span>
+                                    </form>
+                                </div>
+                                <div class="page_number">
+                                    <span>Pages: </span>
+                                    <ul>
+                                        <li>«</li>
+                                        <li class="current_number">1</li>
+                                        <li><a href="#">2</a></li>
+                                        <li>»</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--pagination style end--> 
+                        </div>
+                    </div>  
             </div>
+            <!--pos home section end-->
         </div>
-    </section>
-    <section class="ndt-menu bg-body-tertiary">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#" d-block d-md-none><strong>Trang chủ</strong></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <strong>Nike</strong>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nam</a></li>
-                                    <li><a class="dropdown-item" href="#">Nữ</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <strong>Adidas</strong>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nam</a></li>
-                                    <li><a class="dropdown-item" href="#">Nữ</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <strong>Xu hướng</strong>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Sản phẩm nổi bật</a></li>
-                                    <li><a class="dropdown-item" href="#">Sản phẩm khuyến mãi</a></li>
-                                    <li><a class="dropdown-item" href="#">Trend mới nhất</a></li>
-                                    <li><a class="dropdown-item" href="#">Phong cách lạ</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Xem tất cả</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    <strong>Tin tức</strong>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Tin xu hướng</a></li>
-                                    <li><a class="dropdown-item" href="#">Tin khuyến mãi</a></li>
-                                    <li><a class="dropdown-item" href="#">Tin quà tặng</a></li>
-                                    <li><a class="dropdown-item" href="#">Tin mẹo vặt</a></li>
-                                </ul>
-                            </li>
+</section>
+@endsection
 
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true"><strong>Câu hỏi</strong></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true"><strong>Liên hệ</strong></a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </section>
-    <section class="ndt-content">
-        <div class="slide">
-            <div class="container my-5">
-                <h3>TẤT CẢ SẢN PHẨM</h3>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid h-100" src="img/giay-nike-quest-4-womens-road-running.jpeg"
-                                    alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE QUEST 4</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.399.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>4.460.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Thêm vào giỏ</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-90-se.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE AIR MAX 90 SE</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.600.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>5.500.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-excee.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE AIR MAX EXCEE</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.060.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>4.060.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-revolution-6-running.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE REVOLUTION 6</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">1.800.000<sup>đ</sup></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid h-100" src="img/giay-nike-quest-4-womens-road-running.jpeg"
-                                    alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE QUEST 4</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.399.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>4.460.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Thêm vào giỏ</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-90-se.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE AIR MAX 90 SE</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.600.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>5.500.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-excee.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE AIR MAX EXCEE</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.060.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>4.060.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-revolution-6-running.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE REVOLUTION 6</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">1.800.000<sup>đ</sup></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid h-100" src="img/giay-nike-quest-4-womens-road-running.jpeg"
-                                    alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE QUEST 4</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.399.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>4.460.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Thêm vào giỏ</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-90-se.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE AIR MAX 90 SE</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.600.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>5.500.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-air-max-excee.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE AIR MAX EXCEE</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">3.060.000<sup>đ</sup></strong>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <del>4.060.000<sup>đ</sup></del>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-item">
-                            <div class="product-image">
-                                <img class="img-fluid" src="img/giay-nike-revolution-6-running.jpeg" alt="">
-                            </div>
-                            <div class="product-name">
-                                <h5 class="fs-6 py-1">NIKE REVOLUTION 6</h5>
-                            </div>
-                            <div class="product-price">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <strong class="text-danger fs-5">1.800.000<sup>đ</sup></strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart-hearth-eye my-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <a class="btn btn-sm btn-success form-control">Mua ngay</a>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-info">
-                                            <i class="fa-regular fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <section class="ndt-footer bg-footer py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h6>CHÚNG TÔI LÀ AI ?</h6>
-                    <p class="text-secondary">Copyright@ 2021 Công ty TNHH thời trang Ego Wear
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex
-                        ea commodo consequat
-                    </p>
-                    <p class="text-secondary">Địa chỉ: 221 Chùa Bộc, Đống Đa, Hà Nội, Hà Nội
-                    </p>
-                    <p class="text-secondary"> Điện thoại: 1900 6750 - Email: support@sapo.vn</p>
-                    <h6>MẠNG XÃ HỘI</h6>
-                    <div>
-                        <span class="box border border-danger">
-                            <i class="fa-brands fa-facebook"></i>
-                        </span>
-                        <span class="box border border-danger">
-                            <i class="fa-brands fa-instagram"></i>
-                        </span>
-                        <span class="box border border-danger">
-                            <i class="fa-brands fa-google"></i>
-                        </span>
-                        <span class="box border border-danger">
-                            <i class="fa-brands fa-youtube"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <h6>CHÍNH SÁCH</h6>
-                    <ul class="list">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Sản phẩm</a></li>
-                        <li><a href="#">Xu hướng</a></li>
-                        <li><a href="#">Trang phục</a></li>
-                        <li><a href="#">Phụ kiện</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Câu hỏi</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <h6>KHU BÁN HÀNG</h6>
-                    <ul class="list">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Sản phẩm</a></li>
-                        <li><a href="#">Xu hướng</a></li>
-                        <li><a href="#">Trang phục</a></li>
-                        <li><a href="#">Phụ kiện</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Câu hỏi</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md">
-                    <h6>HỖ TRỢ CHUNG</h6>
-                    <ul class="list">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Sản phẩm</a></li>
-                        <li><a href="#">Xu hướng</a></li>
-                        <li><a href="#">Trang phục</a></li>
-                        <li><a href="#">Phụ kiện</a></li>
-                        <li><a href="#">Tin tức</a></li>
-                        <li><a href="#">Câu hỏi</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ndt-copyright bg-footer">
-        <div class="container border-top py-4">
-            <div class="row">
-                <div class="col-6">
-                    <p class="text-secondary">Bản quyền thuộc về <strong class="text-white">Ego Creative
-                        </strong>Cung cấp bởi
-                        <strong class="text-white">Sapo</strong>
-                    </p>
-                </div>
-                <div class="col-6 text-right">
-                    <ul class="nav">
-                        <li>
-                            <a href="#"> Trang chủ</a>
-                        </li>
-                        <li> <a href="#">Sản phẩm</a></li>
-                        <li> <a href="#">Xu hướng</a></li>
-                        <li> <a href="#">Trang phục</a></li>
-                        <li> <a href="#">Phụ kiện</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-
-</html>
+@section('title')
+    Sản phẩm
+@endsection
+@section('product-list')
+<link rel="stylesheet" href="{{asset("css/product.css")}}">
+@endsection
