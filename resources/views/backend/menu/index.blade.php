@@ -29,52 +29,159 @@
       </div>
       <div class="card-body">
         <div class="row">
-            <div class="col-md-4">
+          <div class="col-md-3">
+            <form action="{{ route('admin.menu.store') }}" method="post">
+              @csrf
                 <div class="accordion" id="accordionExample">
-                    <div class="card mb-0 p-3">
-                       <select name="position" class="form-control">
-                          <option value="mainmenu">Main Menu</option>
-                          <option value="footermenu">Footer Menu</option>
-                       </select>
+                    <div class="card p-3">
+                        <label for="position">Vị trí</label>
+                        <select name="position" id="position" class="form-control">
+                            <option value="mainmenu">Main Menu</option>
+                            <option value="footermenu">Footer Menu</option>
+                        </select>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingCategory">
+                            <a class="d-block" data-toggle="collapse"
+                                data-target="#collapseCategory" aria-expanded="true"
+                                aria-controls="collapseCategory">
+                                Danh mục
+                            </a>
+                        </div>
+                        <div id="collapseCategory" class="collapse"
+                            aria-labelledby="headingCategory" data-parent="#accordionExample">
+                            <div class="card-body">
+                              @foreach ($list_category as $category)
+                                <div class="form-check mb-2">
+                                  <input class="form-check-input" name="categoryid[{{$category->id}}]" type="checkbox" value="category{{$category->id}}" id="category{{$category->id}}">
+                                  <label class="form-check-label" for="category{{$category->id}}">
+                                   {{$category->name}}
+                                  </label>
+                                </div>                                  
+                              @endforeach
+                                <div class="mb-3">
+                                    <input type="submit" name="createCategory" class="btn btn-success" value="Thêm menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                    <div class="card">
+                        <div class="card-header" id="headingBrand">
+                            <a class="d-block" data-toggle="collapse"
+                                data-target="#collapseBrand" aria-expanded="true"
+                                aria-controls="collapseBrand">
+                                Thương hiệu
+                            </a>
+                        </div>
+                        <div id="collapseBrand" class="collapse"
+                            aria-labelledby="headingBrand" data-parent="#accordionExample">
+                            <div class="card-body">
+                                    @foreach ($list_brand as $brand)
+                                      <div class="form-check mb-2">
+                                        <input class="form-check-input" name="brandid[{{$brand->id}}]" type="checkbox" value="brand{{$brand->id}}" id="brand{{$brand->id}}">
+                                        <label class="form-check-label" for="brand{{$brand->id}}">
+                                        {{$brand->name}}
+                                        </label>
+                                      </div>                                  
+                                    @endforeach
+                                <div class="mb-3">
+                                  <input type="submit" name="createBrand" class="btn btn-success" value="Thêm menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                    <div class="card">
+                        <div class="card-header" id="headingTopic">
+                            <a class="d-block" data-toggle="collapse"
+                                data-target="#collapseTopic" aria-expanded="true"
+                                aria-controls="collapseTopic">
+                               Chủ đề
+                            </a>
+                        </div>
+                        <div id="collapseTopic" class="collapse"
+                            aria-labelledby="headingTopic" data-parent="#accordionExample">
+                            <div class="card-body">
+                                @foreach ($list_topic as $topic)
+                                    <div class="form-check mb-2">
+                                      <input class="form-check-input" name="topicid[{{$topic->id}}]" type="checkbox" value="topic{{$topic->id}}" id="topic{{$topic->id}}">
+                                      <label class="form-check-label" for="topic{{$topic->id}}">
+                                      {{$topic->name}}
+                                      </label>
+                                    </div>                                  
+                                @endforeach
+                                <div class="mb-3">
+                                  <input type="submit" name="createTopic" class="btn btn-success" value="Thêm menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                    <div class="card">
+                        <div class="card-header" id="headingPage">
+                            <a class="d-block" data-toggle="collapse"
+                                data-target="#collapsePage" aria-expanded="true"
+                                aria-controls="collapsePage">
+                                Trang đơn
+                            </a>
+                        </div>
+                        <div id="collapsePage" class="collapse"
+                            aria-labelledby="headingPage" data-parent="#accordionExample">
+                            <div class="card-body">
+                                @foreach ($list_page as $page)
+                                  <div class="form-check mb-2">
+                                    <input class="form-check-input" name="pageid[{{$page->id}}]" type="checkbox" value="page{{$page->id}}" id="page{{$page->id}}">
+                                    <label class="form-check-label" for="page{{$page->id}}">
+                                    {{$page->title}}
+                                    </label>
+                                  </div>                                  
+                                @endforeach
+                                <div class="mb-3">
+                                  <input type="submit" name="createPage" class="btn btn-success" value="Thêm menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                    <div class="card">
+                        <div class="card-header" id="headingCustom">
+                            <a class="d-block" data-toggle="collapse"
+                                data-target="#collapseCustom" aria-expanded="true"
+                                aria-controls="collapseCustom">
+                                Tùy liên kết
+                            </a>
+                        </div>
+                        <div id="collapseCustom" class="collapse"
+                            aria-labelledby="headingCustom" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="name">Tên menu</label>
+                                    <input type="text" value="" name="name" id="name" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="link">Liên kết</label>
+                                    <input type="text" value="" name="link" id="link" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                  <input type="submit" name="createCustom" class="btn btn-success" value="Thêm menu">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                    <div class="card p-3">
+                        <label for="status">Trạng thái</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="2">Chưa xuất bản</option>
+                            <option value="1">Xuất bản</option>
+                        </select>
                     </div>
                 </div>
-                <div class="mb-3">
-                   <label>Tên menu (*)</label>
-                   <input type="text" name="name" id="name" placeholder="Nhập tên menu" class="form-control">
-                </div>
-                <div class="mb-3">
-                   <label>Slug</label>
-                   <input type="text" name="slug" id="slug" placeholder="Nhập slug" class="form-control">
-                </div>
-                <div class="mb-3">
-                   <label>Mô tả</label>
-                   <textarea name="description" class="form-control"></textarea>
-                </div>
-                {{-- <div class="mb-3">
-                   <label>Danh mục cha (*)</label>
-                   <select name="parent_id" class="form-control">
-                      <option value="">None</option>
-                      <option value="1">Tên chủ đề</option>
-                   </select>
-                </div> --}}
-                <div class="mb-3">
-                   <label>Hình đại diện</label>
-                   <input type="file" name="image" class="form-control">
-                </div>
-                <div class="mb-3">
-                   <label>Trạng thái</label>
-                   <select name="status" class="form-control">
-                      <option value="1">Xuất bản</option>
-                      <option value="2">Chưa xuất bản</option>
-                   </select>
-                </div>
-                <div class="mb-3 text-right">
-                    <a href="" class="btn btn-sm btn-success" >
-                       <strong>Thêm menu</strong>
-                    </a>
-                </div>
-             </div>
-            <div class="col-md-8">
+            </form>
+        </div>
+          <div class="col-md-9">
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -82,7 +189,9 @@
                             <th style="width:90px" class="text-center">Hình ảnh</th>
                             <th>Tên menu</th>
                             <th>Liên kết</th>
+                            <th>Vị trí</th>
                             <th style="width:190px" class="text-center">Chức năng</th>
+                            <th>ID</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,8 +203,15 @@
                         <td>
                           <img src="" class="img-fluid" alt="">
                         </td>
-                        <td>{{$row->name}}</td>
-                        <td>{{$row->link}}</td>
+                        <td>
+                          {{$row->name}}
+                        </td>
+                        <td>
+                          {{$row->link}}
+                        </td>
+                        <td>
+                          {{$row->position}}
+                        </td>
                         <td class="text-center">
                             <a href="" class="btn btn-sm btn-success">
                                 <i class="fas fa-toggle-on"></i>
@@ -110,6 +226,8 @@
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>
+                        <td>{{$row->id}}</td>
+
                     </tr>
                        @endforeach
                     </tbody>
