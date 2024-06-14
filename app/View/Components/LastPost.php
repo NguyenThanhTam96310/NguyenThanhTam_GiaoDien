@@ -2,12 +2,12 @@
 
 namespace App\View\Components;
 
-use App\Models\Banner;
+use App\Models\Post;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Slide extends Component
+class LastPost extends Component
 {
     /**
      * Create a new component instance.
@@ -22,13 +22,10 @@ class Slide extends Component
      */
     public function render(): View|Closure|string
     {
-        $args_banner = [
-            ['status', '=', 1],
-            ['position', '=', 'slideshow']
-        ];
-        $list_slider = Banner::where($args_banner)
+        $post_new = Post::where([['status', '=', 1], ['type', '=', 'post']])
             ->orderBy('created_at', 'desc')
+            ->limit(3)
             ->get();
-        return view('components.slide', compact('list_slider'));
+        return view('components.last-post', compact('post_new'));
     }
 }

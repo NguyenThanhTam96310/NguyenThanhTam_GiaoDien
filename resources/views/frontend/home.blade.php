@@ -1,6 +1,7 @@
 @extends('layouts.site')
 @section('content')
 <section class="ndt-content">
+  <x-main-menu/>
   <x-slide/>
     <div class="container mb-4 py-3">
       <div class="row">
@@ -32,70 +33,6 @@
   <x-flash-sale/>
   <x-product-new/>
   <x-product-category-home/>
-    
-    <div class="container border-top py-4 bg-danger text-center text-white">
-      <div class="row">
-
-        <h5>HOT: Sale 50% cho toàn bộ đơn hàng có giá trị từ 2 triệu, miễn phí ship toàn quốc</h5>
-
-      </div>
-    </div>
-
-    <div class="container mb-4">
-      <h3 class="text-center py-3">TIN TỨC MỚI NHẤT</h3>
-      <div class="row">
-        <div class="col-md-6">
-          <img class="img-fluid w-100" src="img/classichoodie-post.jpg.webp" alt="">
-          <h6>15/08/2021 - bởi: Ego Creative</h6>
-          <h4>Đoạn Lorem Ipsum chuẩn, được sử dụng từ những năm 1500</h4>
-          <p class="text-black-50 bg-white">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
-
-        </div>
-        <div class="col-md-6">
-          <div class="row mb-2">
-            <div class="col-5">
-              <img class="img-fluid w-100" src="img/post-july-3.png.webp" alt="">
-            </div>
-            <div class="col-7">
-              <h7>15/08/2021 - bởi: Ego Creative</h7>
-              <h5>Đoạn Lorem Ipsum chuẩn, được sử dụng từ những năm 1500</h5>
-              <p class="text-black-50 bg-white">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            </div>
-          </div>
-
-          <div class="row mb-2">
-            <div class="col-5">
-              <img class="img-fluid w-100" src="img/post-july-3.png.webp" alt="">
-            </div>
-            <div class="col-7">
-              <h7>15/08/2021 - bởi: Ego Creative</h7>
-              <h5>Đoạn Lorem Ipsum chuẩn, được sử dụng từ những năm 1500</h5>
-              <p class="text-black-50 bg-white">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            </div>
-          </div>
-          <div class="row mb-2">
-            <div class="col-5">
-              <img class="img-fluid w-100" src="img/post-july-3.png.webp" alt="">
-            </div>
-            <div class="col-7">
-              <h7>15/08/2021 - bởi: Ego Creative</h7>
-              <h5>Đoạn Lorem Ipsum chuẩn, được sử dụng từ những năm 1500</h5>
-              <p class="text-black-50 bg-white">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            </div>
-          </div>
-        </div>
-      </div>
-</section>
+  <x-last-post/>
 @endsection
 @section('title','Trang chủ')

@@ -22,7 +22,14 @@ class UpdateCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|min:6'
+        ];
+    }
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Tên danh mục không để trống!',
+            'name.min' => 'Tên ít nhất 6 tý tự!'
         ];
     }
 }

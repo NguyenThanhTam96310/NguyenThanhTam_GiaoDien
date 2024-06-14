@@ -3,7 +3,7 @@
       <img class="img-fluid h-100" src="img/giay-nike-quest-4-womens-road-running.jpeg" alt="">
     </div>
     <div class="product-name">
-      <h5 class="fs-6 py-1">NIKE QUEST 4</h5>
+      <h5 class="fs-6 py-1">{{$product->name}}</h5>
     </div>
     <div class="product-price">
       <div class="row">

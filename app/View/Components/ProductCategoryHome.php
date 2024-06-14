@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Product;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,10 @@ class ProductCategoryHome extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.product-category-home');
+        $product_category = Product::where('status', '=', 1)
+            ->orderBy('created_at', 'desc')
+            ->limit(5)
+            ->get();
+        return view('components.product-category-home',compact('product_category'));
     }
 }

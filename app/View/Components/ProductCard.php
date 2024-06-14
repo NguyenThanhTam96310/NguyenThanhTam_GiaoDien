@@ -8,19 +8,15 @@ use Illuminate\View\Component;
 
 class ProductCard extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
-    }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
+    public $product_row = null;
+    public function __construct($productitem)
+    {
+        $this->product_row = $productitem;
+    }
     public function render(): View|Closure|string
     {
-        return view('components.product-card');
+        $product = $this->product_row;
+        return view('components.product-card', compact('product'));
     }
 }
