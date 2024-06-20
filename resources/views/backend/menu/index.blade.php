@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-12 text-right">
             <a class="btn btn-sm btn-danger "
-            href="{{route('admin.product.trash')}}">
+            href="{{route('admin.menu.trash')}}">
             <i class="fas fa-trash"></i>
               <strong>Thùng rác</strong></a>
           </div>
@@ -212,20 +212,31 @@
                         <td>
                           {{$row->position}}
                         </td>
-                        <td class="text-center">
-                            <a href="" class="btn btn-sm btn-success">
-                                <i class="fas fa-toggle-on"></i>
-                            </a>
-                            <a href="" class="btn btn-sm btn-info">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="" class="btn btn-sm btn-primary">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <a href="" class="btn btn-sm btn-danger">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                        </td>
+                        @php
+                             $args=['id'=>$row->id];
+                          @endphp
+                          <td class="text-center">
+                              @if ($row->status==1)
+                                <a href="{{route('admin.menu.status',$args)}}" class="btn btn-sm btn-success">
+                                  <i class="fas fa-toggle-on"></i>
+                              </a>
+                              
+                              @else
+                                  <a href="{{route('admin.menu.status',$args)}}" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-toggle-off"></i>
+                                </a>
+                              @endif
+                                  
+                              <a href="{{route('admin.menu.show',$args)}}" class="btn btn-sm btn-info">
+                                  <i class="fas fa-eye"></i>
+                              </a>
+                              <a href="{{route('admin.menu.edit',$args)}}" class="btn btn-sm btn-primary">
+                                  <i class="fas fa-edit"></i>
+                              </a>
+                              <a href="{{route('admin.menu.delete',$args)}}" class="btn btn-sm btn-danger">
+                                  <i class="fas fa-trash"></i>
+                              </a>
+                          </td>
                         <td>{{$row->id}}</td>
 
                     </tr>

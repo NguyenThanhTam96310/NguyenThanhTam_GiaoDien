@@ -47,11 +47,11 @@
                             </div>
                             <div class="mb-3">
                                 <label for="detail">Chi tiết</label>
-                                <textarea name="detail" id="detail" rows="8" class="form-control" value="{{old('detail')}}"></textarea>
+                                <textarea name="detail" id="detail" rows="8" class="form-control"> {{old('detail')}}</textarea>
                             </div>
                             <div class="mb-3">
                                 <label for="description">Mô tả</label>
-                                <textarea name="description" id="description" class="form-control" value="{{old('description')}}"></textarea>
+                                <textarea name="description" id="description" class="form-control" >{{old('description')}}</textarea>
                             </div>
                         </div>
                         <div class="col-md-3">

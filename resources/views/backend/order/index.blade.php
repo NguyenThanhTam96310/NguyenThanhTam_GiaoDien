@@ -22,7 +22,7 @@
           <div class="col-12 text-right">
             <div class="col-12 text-right">
               <a class="btn btn-sm btn-danger "
-              href="{{route('admin.product.trash')}}">
+              href="{{route('admin.order.trash')}}">
               <i class="fas fa-trash"></i>
                 <strong>Thùng rác</strong></a>
             </div>
@@ -59,20 +59,31 @@
                 <td>
                   {{$row->email}}
                 </td>
-                <td class="text-center">
-                    <a href="" class="btn btn-sm btn-success">
-                        <i class="fas fa-toggle-on"></i>
+          @php
+                    $args=['id'=>$row->id];
+                @endphp
+                  <td class="text-center">
+                  @if ($row->status==1)
+                    <a href="{{route('admin.order.status',$args)}}" class="btn btn-sm btn-success">
+                      <i class="fas fa-toggle-on"></i>
+                  </a>
+                  
+                  @else
+                      <a href="{{route('admin.order.status',$args)}}" class="btn btn-sm btn-danger">
+                        <i class="fas fa-toggle-off"></i>
                     </a>
-                    <a href="" class="btn btn-sm btn-info">
-                        <i class="fas fa-eye"></i>
-                    </a>
-                    <a href="" class="btn btn-sm btn-primary">
-                        <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="" class="btn btn-sm btn-danger">
-                        <i class="fas fa-trash"></i>
-                    </a>
-                </td>
+                  @endif
+                      
+                  <a href="{{route('admin.order.show',$args)}}" class="btn btn-sm btn-info">
+                      <i class="fas fa-eye"></i>
+                  </a>
+                  <a href="{{route('admin.order.edit',$args)}}" class="btn btn-sm btn-primary">
+                      <i class="fas fa-edit"></i>
+                  </a>
+                  <a href="{{route('admin.order.delete',$args)}}" class="btn btn-sm btn-danger">
+                      <i class="fas fa-trash"></i>
+                  </a>
+                    </td>
             </tr>
                @endforeach
             </tbody>

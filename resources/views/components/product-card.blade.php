@@ -1,18 +1,32 @@
 <div class="product-item">
-    <div class="product-image">
-      <img class="img-fluid h-100" src="img/giay-nike-quest-4-womens-road-running.jpeg" alt="">
-    </div>
+    <figure class="product-image w-100 overflow-hidden">
+      <a href="{{route('side.product.detail',['slug'=>$product->slug])}}">
+        <img 
+      class="img-fluid" src="{{asset('img/giay-nike-quest-4-womens-road-running.jpeg')}}" alt="{{$product->name}}">
+      </a>
+    </figure>
     <div class="product-name">
-      <h5 class="fs-6 py-1">{{$product->name}}</h5>
-    </div>
+      <h5 class="fs-6 py-1">
+        <a class="text-black" href="{{route('side.product.detail',['slug'=>$product->slug])}}">
+          {{$product->name}}
+        </a>
+        </h5>
+    </div>    
     <div class="product-price">
       <div class="row">
-        <div class="col-6">
-          <strong class="text-danger fs-5">3.399.000<sup>đ</sup></strong>
-        </div>
-        <div class="col-6 text-end">
-          <del>4.460.000<sup>đ</sup></del>
-        </div>
+        @if($product->pricesale>0 && $product->pricesale<$product->price)
+          <div class="col-6">
+            <strong class="text-danger fs-5">{{$product->pricesale}}<sup>đ</sup></strong>
+          </div>
+          <div class="col-6 text-end">
+            <del>{{$product->price}}<sup>đ</sup></del>
+          </div>
+        @else
+          <div class="col-6">
+            <strong class="text-danger fs-5">{{$product->price}}<sup>đ</sup></strong>
+          </div>
+        
+        @endif
       </div>
     </div>
     <div class="product-cart-hearth-eye my-2">

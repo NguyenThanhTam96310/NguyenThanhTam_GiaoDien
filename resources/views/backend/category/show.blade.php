@@ -9,7 +9,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-            <li class="breadcrumb-item active">Chi tiết anh mục</li>
+            <li class="breadcrumb-item active">Chi tiết danh mục</li>
           </ol>
         </div>
       </div>
@@ -25,10 +25,10 @@
             <i class="fas fa-arrow-left"></i>
               <strong>Về danh sách</strong></a>
               <a href="{{route('admin.category.edit',['id'=>$category->id])}}" class="btn btn-sm btn-primary">
-                <i class="fas fa-toggle-off"> Sửa</i>
+                <i class="fas fa-edit"> Sửa</i>
             </a>
               <a href="{{route('admin.category.delete',['id'=>$category->id])}}" class="btn btn-sm btn-danger">
-              <i class="fas fa-eye"> Xóa</i>
+              <i class="fas fa-trash"> Xóa</i>
           </a>
           </div>
         </div> 

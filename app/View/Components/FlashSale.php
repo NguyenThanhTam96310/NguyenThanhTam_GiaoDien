@@ -28,7 +28,7 @@ class FlashSale extends Component
         ];
         $product_sale = Product::where('status', '=', 1)
             ->orderBy('created_at', 'desc')
-            ->limit(5)
+            ->limit(4)
             ->get();
         return view('components.flash-sale', compact('product_sale'));
     }

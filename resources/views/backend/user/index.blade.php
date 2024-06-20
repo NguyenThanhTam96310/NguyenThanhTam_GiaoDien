@@ -60,21 +60,32 @@
                     <td>
                       {{$row->email}}
                     </td>
-                    <td class="text-center">
-                        <a href="" class="btn btn-sm btn-success">
+                    @php
+                          $args=['id'=>$row->id];
+                      @endphp
+                        <td class="text-center">
+                        @if ($row->status==1)
+                          <a href="{{route('admin.user.status',$args)}}" class="btn btn-sm btn-success">
                             <i class="fas fa-toggle-on"></i>
                         </a>
-                        <a href="" class="btn btn-sm btn-info">
+                        
+                        @else
+                            <a href="{{route('admin.user.status',$args)}}" class="btn btn-sm btn-danger">
+                              <i class="fas fa-toggle-off"></i>
+                          </a>
+                        @endif
+                            
+                        <a href="{{route('admin.user.show',$args)}}" class="btn btn-sm btn-info">
                             <i class="fas fa-eye"></i>
                         </a>
-                        <a href="" class="btn btn-sm btn-primary">
+                        <a href="{{route('admin.user.edit',$args)}}" class="btn btn-sm btn-primary">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <a href="" class="btn btn-sm btn-danger">
+                        <a href="{{route('admin.user.delete',$args)}}" class="btn btn-sm btn-danger">
                             <i class="fas fa-trash"></i>
                         </a>
                     </td>
-                    <td>1</td>
+                    <td>{{$row->id}}</td>
                 </tr>
               @endforeach
             </tbody>

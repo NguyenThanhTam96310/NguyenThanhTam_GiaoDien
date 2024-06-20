@@ -24,7 +24,7 @@ class ProductCategoryHome extends Component
     {
         $product_category = Product::where('status', '=', 1)
             ->orderBy('created_at', 'desc')
-            ->limit(5)
+            ->limit(4)
             ->get();
         return view('components.product-category-home',compact('product_category'));
     }

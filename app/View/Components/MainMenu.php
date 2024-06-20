@@ -28,7 +28,7 @@ class MainMenu extends Component
             ['parent_id', '=', 0]
         ];
         $list_menu = Menu::where($args_mainmenu)
-            ->orderBy('sort_order', 'asc')
+            ->orderBy('sort_order', 'desc')
             ->get();
         return view('components.main-menu', compact('list_menu'));
     }

@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-12 text-right">
             <a class="btn btn-sm btn-danger "
-            href="{{route('admin.product.trash')}}">
+            href="{{route('admin.topic.trash')}}">
             <i class="fas fa-trash"></i>
               <strong>Thùng rác</strong></a>
           </div>

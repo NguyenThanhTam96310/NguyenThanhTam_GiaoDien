@@ -24,7 +24,7 @@ class MainMenuItem extends Component
             ['parent_id', '=', $menu->id]
         ];
         $list_menu_sub = Menu::where($args_mainmenu_sub)
-            ->orderBy('sort_order', 'asc')
+            ->orderBy('sort_order', 'desc')
             ->get();
         return view('components.main-menu-item', compact('menu', 'list_menu_sub'));
     }

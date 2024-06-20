@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-md-1">
           <a href="#">
-            <img class="img-fluid w-100" src="img/logo.png.jpg" alt="logo">
+            <img class="img-fluid w-100" src="{{asset('img/logo.png.jpg')}}" alt="logo">
           </a>
         </div>
         <div class=" container col-md-6 pt-4 pl-3">

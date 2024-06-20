@@ -77,7 +77,7 @@
                <a href="{{route('admin.post.edit',$args)}}" class="btn btn-sm btn-primary">
                    <i class="fas fa-edit"></i>
                </a>
-               <a href="{{route('admin.category.delete',$args)}}" class="btn btn-sm btn-danger">
+               <a href="{{route('admin.post.delete',$args)}}" class="btn btn-sm btn-danger">
                    <i class="fas fa-trash"></i>
                </a>
            </td>

@@ -21,7 +21,10 @@ use App\Http\Controllers\backend\TopicController;
 
 //route site
 Route::get('/', [HomeController::class, 'index'])->name('side.home');
-Route::get('/product', [ProductSiteController::class, 'index'])->name('side.product');
+Route::get('/san-pham', [ProductSiteController::class, 'index'])->name('side.product');
+//product categoty
+Route::get('danh-muc/{slug}', [ProductSiteController::class, 'category'])->name('side.product.category');
+//product detail
 Route::get('/product_detail/{slug}', [ProductSiteController::class, 'product_detail'])->name('side.product.detail');
 Route::get('/contact', [ContactSiteController::class, 'index'])->name('side.contact');
 
@@ -87,8 +90,8 @@ Route::prefix("admin")->group(function () {
         Route::get("/", [ContactController::class, 'index'])->name('admin.contact.index');
         Route::get("trash", [ContactController::class, 'trash'])->name('admin.contact.trash');
         Route::get("show/{id}", [ContactController::class, 'show'])->name('admin.contact.show');
-        Route::get("create", [ContactController::class, 'create'])->name('admin.contact.create');
-        Route::post("store", [ContactController::class, 'store'])->name('admin.contact.store');
+        // Route::get("create", [ContactController::class, 'create'])->name('admin.contact.create');
+        // Route::post("store", [ContactController::class, 'store'])->name('admin.contact.store');
         Route::get("edit/{id}", [ContactController::class, 'edit'])->name('admin.contact.edit');
         Route::put("update/{id}", [ContactController::class, 'update'])->name('admin.contact.update');
         Route::get("status/{id}", [ContactController::class, 'status'])->name('admin.contact.status');

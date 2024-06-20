@@ -21,10 +21,6 @@
         <div class="row">
           <div class="col-12 text-right">
             <div class="col-12 text-right">
-              <a class="btn btn-sm btn-success "
-              href="{{route('admin.contact.create')}}">
-              <i class="fas fa-calendar-plus"></i>
-                <strong>Thêm liên hệ</strong></a>
               <a class="btn btn-sm btn-danger "
               href="{{route('admin.contact.trash')}}">
               <i class="fas fa-trash"></i>
@@ -60,21 +56,32 @@
                     <td>
                       {{$row->email}}
                     </td>
-                    <td class="text-center">
-                        <a href="" class="btn btn-sm btn-success">
+                    @php
+                          $args=['id'=>$row->id];
+                      @endphp
+                        <td class="text-center">
+                        @if ($row->status==1)
+                          <a href="{{route('admin.contact.status',$args)}}" class="btn btn-sm btn-success">
                             <i class="fas fa-toggle-on"></i>
                         </a>
-                        <a href="" class="btn btn-sm btn-info">
+                        
+                        @else
+                            <a href="{{route('admin.contact.status',$args)}}" class="btn btn-sm btn-danger">
+                              <i class="fas fa-toggle-off"></i>
+                          </a>
+                        @endif
+                            
+                        <a href="{{route('admin.contact.show',$args)}}" class="btn btn-sm btn-info">
                             <i class="fas fa-eye"></i>
                         </a>
-                        <a href="" class="btn btn-sm btn-primary">
+                        <a href="{{route('admin.contact.edit',$args)}}" class="btn btn-sm btn-primary">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <a href="" class="btn btn-sm btn-danger">
+                        <a href="{{route('admin.contact.delete',$args)}}" class="btn btn-sm btn-danger">
                             <i class="fas fa-trash"></i>
                         </a>
                     </td>
-                    <td>1</td>
+                    <td> {{$row->id}}</td>
                 </tr>
               @endforeach
             </tbody>
